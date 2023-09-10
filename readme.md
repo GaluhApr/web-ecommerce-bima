@@ -1,6 +1,3 @@
-<p align="center"><img src="https://rahul.btao.in/wp-content/uploads/2021/09/F_Image.jpg" width="400"></p>
-
- 
 
 ## Ecommerce Website using Laravel 5.8 
 
