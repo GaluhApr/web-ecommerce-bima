@@ -20,10 +20,7 @@ class CreateProductsTable extends Migration
             $table->string('name');
             $table->string('description');
             $table->string('url');
-            $table->integer('rating')->nullable();
-            $table->integer('price')->nullable();
-            $table->integer('discount')->nullable();
-            
+
             $table->string('image1')->nullable();
             
             $table->string('image2')->nullable();
@@ -31,15 +28,7 @@ class CreateProductsTable extends Migration
             $table->string('image3')->nullable();
             
             $table->string('image4')->nullable();
-            $table->string('title')->nullable();
-            $table->string('keywords')->nullable();
-            $table->string('meta_description')->nullable();
-            $table->string('status')->default('1');
-            
-            $table->integer('delivery_charges')->nullable();
-            
-            $table->string('additional_info')->nullable();
-                
+            $table->string('title')->nullable();    
             $table->timestamps();
         });
     }

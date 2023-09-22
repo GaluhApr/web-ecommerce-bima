@@ -24,65 +24,81 @@
       }
     }
      </style> 
+     
     <div class="container">
     <div class="row d-flex align-items-center ">
-<section align="center" id="helpcenterindesktopmode">
-    <div class="card-deck" style="padding:5%;">
-    <h1 align="center" class="black-text col-md-12" style="font-weight:bold;">Help Center</h1>
-    
-    <div class="card mb-4 ">
-    
-    <div class="view overlay">
-    <img class="card-img-top  animated pulse infinite slow" src="https://codyhouse.co/demo-templates/mercurio/assets/img/card-v8-img-1.jpg" alt="Card image cap">
-    <a href="Frequently-Asked-Questions">
-    <div class="mask rgba-white-slight"></div>
-    </a>
-    </div>
-    
-    <div class="card-body">
-    <h4 align="center" class="card-title font-weight-bold">FAQ'S</h4>
-    
-    <a href="Frequently-Asked-Questions" align="center" type="button" class="btaobtn btaobtn-outline-primary btn-md  animated pulse infinite slow">Read more</a>
-    </div>
-    </div>
-    
-    
-    <div class="card mb-4">
-    
-    <div class="view overlay">
-    <img class="card-img-top  animated pulse infinite slow" src="https://codyhouse.co/demo-templates/mercurio/assets/img/card-v8-img-3.jpg" alt="Card image cap">
-    <a href="Shipping-and-Returns">
-    <div class="mask rgba-white-slight"></div>
-    </a>
-    </div>
-    
-    <div class="card-body">
-    <h4 align="center" class="card-title font-weight-bold">Shipping & Returns</h4>
-     
-    <a href="Shipping-and-Returns" align="center" type="button" class="btaobtn btaobtn-outline-primary  btn-md  animated pulse infinite slow">Read more</a>
-    </div>
-    </div>
-    
-    
-    <div class="card mb-4">
-    
-    <div class="view overlay">
-    <img class="card-img-top  animated pulse infinite slow" src="https://codyhouse.co/demo-templates/mercurio/assets/img/card-v8-img-4.jpg" alt="Card image cap">
-    <a href="Contact">
-    <div class="mask rgba-white-slight"></div>
-    </a>
-    </div>
-    
-    <div class="card-body">
-    <h4 align="center" class="card-title font-weight-bold">Contact Us</h4>
-    
-    <a href="Contact" align="center" type="button" class="btaobtn btaobtn-outline-primary  btn-md  animated pulse infinite slow">Read more</a>
-    </div>
-    </div>
-    
-    </div>
-    </section>
-    
+
+    <!--All Product-->
+@php
+$Products=App\Models\Products::where('status','=','1')->get();
+@endphp
+    <!-- Products Starts Here -->
+<section id="Products" align="center" class="px-5 wow animated fadeInUpBig fast" style=" font-family: 'Balsamiq Sans', cursive;">
+  
+  <h1 class="black-text" style="font-weight:bold;">PRODUCTS</h1> 
+  <div align="center">
+      <p  class="col-md-2" style=" border-bottom: 2px solid #003399;"></p>
+  </div>
+  <div  class="row my-4 px-4 "  style="width:100%;" >
+    @foreach($Products as $item)
+    <div class="col-md-3 px-4 my-5"  >
+        <a href="{{url('Shop/'.$item->url)}}">
+            <img src=" {{asset('Uploads/Products/'.$item->image1)}}" alt="" class="img-fluid"  >
+            </a>
+        <div class="py-2" style="background:white;">
+          <span class="black-text my-3" style="font-weight:bold; font-family: 'Balsamiq Sans', cursive;">{{$item->name}}</span>
+          <br>
+          Price : ₹ {{$item->price}}<br>
+            @if($item->rating==1)
+                          <span class="fa fa-star checked"></span>
+                            <span class="fa fa-star"></span>
+                            <span class="fa fa-star "></span>
+                            <span class="fa fa-star"></span>
+                            <span class="fa fa-star"></span>
+                        @elseif($item->rating==2)
+                        <span class="fa fa-star checked"></span>
+                            <span class="fa fa-star checked"></span>
+                            <span class="fa fa-star "></span>
+                            <span class="fa fa-star"></span>
+                            <span class="fa fa-star"></span>
+                          @elseif($item->rating==3)
+                          <span class="fa fa-star checked"></span>
+                            <span class="fa fa-star checked"></span>
+                            <span class="fa fa-star checked"></span>
+                            <span class="fa fa-star"></span>
+                            <span class="fa fa-star"></span>
+                        
+                          @elseif($item->rating==4)
+                          <span class="fa fa-star checked"></span>
+                            <span class="fa fa-star checked"></span>
+                            <span class="fa fa-star checked"></span>
+                            <span class="fa fa-star checked"></span>
+                            <span class="fa fa-star"></span>
+                        
+                          @else
+                          <span class="fa fa-star checked"></span>
+                            <span class="fa fa-star checked"></span>
+                            <span class="fa fa-star checked"></span>
+                            <span class="fa fa-star checked"></span>
+                            <span class="fa fa-star checked"></span>
+                          @endif
+                           
+                          <br>
+         
+             <a href="Shop/{{$item->url}}" class="btn  btn-primary">Selengkapnya</a>
+          
+        </div>
+    </div>  
+   @endforeach
+
+  </div>
+ 
+  <hr class="col-md-6"> 
+</section>
+<!-- Products Ends Here --> 
+    <!--End of All Product-->
+
+<!--Mobile Mode-->
 <section id="helpcenterinmobilemode" align="center"  class="wow fadeInUp" id="featuredproducts">
     <h1 align="center" class="black-text col-md-12" style="font-weight:bold;">Help Center</h1>
     
@@ -133,6 +149,7 @@
     
     </div>
     </section>
+    <!-- End of Mobile Mode-->
     </div>
     </div>
     </section>

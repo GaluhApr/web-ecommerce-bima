@@ -23,7 +23,7 @@ Route::get('/Help', function () {
     return view('Help');
 });
 
-Route::get('/Frequently-Asked-Questions', function () {
+Route::get('/FrequentlyAskedQuestion', function () {
     return view('FAQS');
 });
 Route::get('/Shipping-and-Returns', function () {
