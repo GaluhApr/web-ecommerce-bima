@@ -121,6 +121,9 @@
 
 
           <button class="btaobtn btaobtn-primary px-2 py-2 book-now-btn">Kontak Pembeli</button>
+          <a href="https://api.whatsapp.com/send?phone=6288215357074">Kontak Whatsapp</a>
+
+
           <button class="btaobtn btaobtn-light px-2 py-2 add-to-cart-btn">Favorit </button>
           <div id="showloading"> </div>
           <div align="left" class="alert alert-danger" id="msg_diverr2" style="display: none;">
