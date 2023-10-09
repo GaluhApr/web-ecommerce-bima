@@ -112,19 +112,16 @@
 
 
         <input type="hidden" name="product_id" min=0 value="{{$Product->id}}" required class="form-control product_id">
-        <p> Price : <strong style="font-size:20px;font-family: 'Balsamiq Sans', cursive;">₹ {{$Product->price}}</strong></p>
-        <?php echo $Product->additional_info; ?>
-        <div class="col-md-6" style="margin-left:-20px;">
-          <input type="number" class="form-control quantity" name="quantity" placeholder="Quantity">
-        </div>
+        <a href="{{$Product->urldemo}}"><strong style="font-size:20px;font-family: 'Balsamiq Sans', cursive;"> Url Demo </strong>: {{$Product->urldemo}}</a>
         <div class="col-md-12 my-3" id="changethebuttons">
 
 
-          <button class="btaobtn btaobtn-primary px-2 py-2 book-now-btn">Kontak Pembeli</button>
-          <a href="https://api.whatsapp.com/send?phone=6288215357074">Kontak Whatsapp</a>
+          <!-- <button class="btaobtn btaobtn-primary px-2 py-2 book-now-btn">Kontak Pembeli</button> -->
+          <a href="https://api.whatsapp.com/send?phone=6282326433611">Kontak Whatsapp</a>
 
 
           <button class="btaobtn btaobtn-light px-2 py-2 add-to-cart-btn">Favorit </button>
+
           <div id="showloading"> </div>
           <div align="left" class="alert alert-danger" id="msg_diverr2" style="display: none;">
             <span id="triggererrors"></span>

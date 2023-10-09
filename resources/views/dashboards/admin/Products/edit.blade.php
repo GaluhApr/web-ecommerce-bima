@@ -75,7 +75,7 @@
 
                           <div class="col-md-6">
                               <div class="form-group">
-                                  <label> Custom URL(Slug)</label>
+                                  <label> Custom Url (Slug)</label>
                                   <input type="text" class="form-control" name="url" placeholder="Custom URL" value="{{$Products->url}}">
                               </div>
                           </div>
@@ -97,16 +97,18 @@
 
                           <div class="col-md-6"   >
                               <div class="form-group">
-                                  <label> Price</label>
-                                  <input type="text" name="price" min="0" class="form-control" value="{{$Products->price}}">
+                                  <label> url demo</label>
+                                  <input type="text" name="urldemo" min="0" class="form-control" value="{{$Products->urldemo}}">
                               </div>
                           </div>
-                          <div class="col-md-6"   >
+
+                          
+                          <!-- <div class="col-md-6"   >
                               <div class="form-group">
                                   <label>Discount ( in terms of %)</label>
                                   <input type="number" name="Discount" min="0" class="form-control" value="{{$Products->discount}}">
                               </div>
-                          </div>
+                          </div> -->
   
                           <div class="col-md-6">
                             <div class="form-group">
