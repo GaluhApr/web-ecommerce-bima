@@ -57,7 +57,7 @@
 
         <li class="active"><a href="/">Home</a></li>
         <li><a href="/#About">About</a></li>
-        <li><a href="{{url('Help')}}">Products</a></li>
+        <li><a href="{{url('allproducts')}}">Products</a></li>
 
         <li><a href="/#Team">Team</a></li>
 

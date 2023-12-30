@@ -1,5 +1,5 @@
 @extends('layout')
-@section('title') Gainloe @endsection
+@section('title') BimaTech @endsection
 @section('keywords') Home,About,Contact,Car @endsection
 @section('description') Write some descripton about the webpage @endsection
 @section('content')
@@ -26,11 +26,11 @@ $Products=App\Models\Products::where('status','=','1')->get();
   <div align="center">
     <p class="col-md-2" style=" border-bottom: 2px solid #003399;"></p>
   </div>
-  <div class="row my-4 px-4 " style="width:100%;">
+  <div class="row my-4 px-4 " style="width:120%;">
     @foreach($Products as $item)
     <div class="col-md-3 px-4 my-5">
       <a href="{{url('Shop/'.$item->url)}}">
-        <img src=" {{asset('Uploads/Products/'.$item->image1)}}" alt="" class="img-fluid">
+        <img src=" {{asset('Uploads/Products/'.$item->image1)}}" alt="" class="img-fluid" style=" width: 200%; height: 80%; object-fit: cover;">
       </a>
       <div class="py-2" style="background:white;">
         <span class="black-text my-3" style="font-weight:bold; font-family: 'Balsamiq Sans', cursive;">{{$item->name}}</span>

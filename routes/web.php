@@ -1,5 +1,5 @@
 <?php
-
+use App\Http\Controllers\ProductController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -19,9 +19,15 @@ Route::get('/', function () {
 Route::get('/about', function () {
     return view('about');
 });
-Route::get('/Help', function () {
-    return view('Help');
-});
+// Route::get('/allproducts', function () {
+//     return view('allproducts');
+// });
+
+// Route::get('/allproducts/category/{id}', 'Admin\ProductController@category');
+
+Route::get('/allproducts', 'Admin\ProductController@allProducts')->name('allproducts');
+Route::get('/categoryproducts/category/{id}', 'Admin\ProductController@category')->name('category');
+
 
 Route::get('/FrequentlyAskedQuestion', function () {
     return view('FAQS');

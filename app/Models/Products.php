@@ -28,4 +28,8 @@ class Products extends Model
 
 
     ];
+    public function category()
+    {
+        return $this->belongsTo(Category::class, 'category'); // Mengasumsikan 'category_id' adalah nama kolom kunci asing di tabel products
+    }
 }

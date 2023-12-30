@@ -86,6 +86,19 @@
                                     </div>
                                 </div>
 
+                                <div class="col-md-12">
+                                    <div class="form-group">
+                                        <label>Url Demo</label>
+                                        <textarea rows="4" class="form-control" name="url_demo" placeholder="url demo"></textarea>
+                                    </div>
+                                </div>
+
+                                <div class="col-md-12">
+                                    <div class="form-group">
+                                        <label>Category</label>
+                                        <textarea rows="4" class="form-control" name="category" placeholder="category"></textarea>
+                                    </div>
+                                </div>
 
                                 <div class="col-md-6">
                                     <div class="form-group">
@@ -93,6 +106,7 @@
                                         <input type="text" name="price" min="0" class="form-control">
                                     </div>
                                 </div>
+
                                 <div class="col-md-6">
                                     <div class="form-group">
                                         <label>Discount ( in terms of %)</label>

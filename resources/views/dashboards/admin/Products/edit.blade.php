@@ -97,8 +97,15 @@
 
                           <div class="col-md-6"   >
                               <div class="form-group">
-                                  <label> url demo</label>
+                                  <label>Url Demo</label>
                                   <input type="text" name="urldemo" min="0" class="form-control" value="{{$Products->urldemo}}">
+                              </div>
+                          </div>
+
+                          <div class="col-md-6"   >
+                              <div class="form-group">
+                                  <label>Category</label>
+                                  <input type="text" name="category" min="0" class="form-control" value="{{$Products->category}}">
                               </div>
                           </div>
 
